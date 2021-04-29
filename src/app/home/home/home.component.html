@@ -1,13 +1,21 @@
 <div class="text-center mb-4">
-    <span><a routerLink="/registration">CPR</a></span>
-    <span><a routerLink="/registration">AED</a></span>
-    <span><a routerLink="/registration">ACLS</a></span>
-    <span><a routerLink="/registration">EMR</a></span>
-    <span><a routerLink="/registration">PALS</a></span>
-    <span><a routerLink="/registration">BLOOD & AIR BORNE PATHOGENS</a></span>
+    <div class="container">
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">CPR</a></span>
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">ACLS</a></span>
+    </div>
+    <div class="container">
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 rounded-circle m-1">EMR</a></span>
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-success p-4 rounded-circle m-1">PALS</a></span>
+    </div>
+    <div class="container mb-2 mt-2">
+        <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 ">BLOOD & AIR BORNE PATHOGENS</a></span>
+    </div>
+
 </div>
 <div class="container mb-4">
-    <h2 class="text-center mb-4 "><u>Testimonials</u> </h2>
+    <h2 class="text-center mb-4 text-secondary"><u>Testimonials</u> </h2>
         <div class="row">
             <div class="col-lg-3 col-sm-12 mb-2">
                 <div class="card bg-primary text-white text-center p-3">
@@ -60,27 +68,30 @@
         </div>  
 </div>
 <div class="container mb-4">
-    <h2 class="text-center mb-4 "><u>Contact</u> </h2>
+    <h2 class="text-center mb-4 text-secondary"><u>Contact</u> </h2>
     <div class="row">
         <div class="col-sm-12 col-lg-4">
 
         </div>
         <div class="col-sm-12 col-lg-4">
             <form>
-                <div class="">
+                <div class="mb-2">
                     <input type="text" class="form-control" placeholder="First name">
                 </div>
-                <div class="">
+                <div class="mb-2">
                     <input type="text" class="form-control" placeholder="Last name">
                 </div>
-                <div class="">
+                <div class="mb-2">
                     <input type="text" class="form-control" placeholder="Email">
                 </div>
-                <div class="">
+                <div class="mb-2">
                     <input type="text" class="form-control" placeholder="Phone">
                 </div>
+                <div class="mb-2">
+                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                </div>
 
-                <button type="submit" class="btn btn-primary float-right mt-2">Sign in</button>
+                <button type="submit" class="btn btn-primary float-right mt-2">Send</button>
             </form>
         </div>
         <div class="col-sm-12 col-lg-4">
