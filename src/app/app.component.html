@@ -1,21 +1,25 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 
 <!-- Toolbar -->
-<div class="toolbar" role="banner">
-  <p> <a routerLink="/home">WELCOME</a></p>
-</div>
+<nav class="navbar navbar-light bg-light">
+  <span class="float-left navbar-brand"> <a routerLink="/home">WELCOME</a></span>
+  <span class="float-right navbar-brand"> <a routerLink="/home">LOGIN</a></span>
+</nav>
 
-<div class="content" role="main">
+<div class="jumbotron jumbotron-fluid">
 
-  <div class="card highlight-card card-small">
-    <h1> JOSHWANT TRAINING</h1>
+  <div class="text-center">
+    <h1 > JOSHWANT TRAINING</h1>
     <P> RWJ Barnabas Health: Certified Instructor</P>
   </div>
-  <span><a routerLink="/registration">CPR</a></span>
-  <span><a routerLink="/registration">AED</a></span>
-  <span><a routerLink="/registration">ACLS</a></span>
-  <span><a routerLink="/registration">EMR</a></span>
-  <span><a routerLink="/registration">PALS</a></span>
-  <span><a routerLink="/registration">BLOOD & AIR BORNE PATHOGENS</a></span>
+  <div class="text-center">
+    <span><a routerLink="/registration">CPR</a></span>
+    <span><a routerLink="/registration">AED</a></span>
+    <span><a routerLink="/registration">ACLS</a></span>
+    <span><a routerLink="/registration">EMR</a></span>
+    <span><a routerLink="/registration">PALS</a></span>
+    <span><a routerLink="/registration">BLOOD & AIR BORNE PATHOGENS</a></span>
+  </div>
+  
 </div>
 <router-outlet></router-outlet>
