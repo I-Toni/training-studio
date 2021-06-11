@@ -7,6 +7,7 @@ import { AdminComponent } from './admin/admin/admin.component';
 import { RegistrationComponent } from './registration/registration/registration.component';
 import { HomeComponent } from './home/home/home.component';
 import { LoginComponent } from './login/login/login.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { LoginComponent } from './login/login/login.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [ DataService ],
   bootstrap: [AppComponent]

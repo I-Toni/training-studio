@@ -1,101 +1,121 @@
-<div class="text-center mb-4">
-    <div class="container">
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">CPR</a></span>
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">ACLS</a></span>
+<div *ngIf="hideConfirmation()">
+    <div class="text-center mb-4">
+        <div class="container">
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">CPR</a></span>
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">ACLS</a></span>
+        </div>
+        <div class="container">
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 rounded-circle m-1">EMR</a></span>
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-success p-4 rounded-circle m-1">PALS</a></span>
+        </div>
+        <div class="container mb-2 mt-2">
+            <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 ">BLOOD & AIR BORNE PATHOGENS</a></span>
+        </div>
+    
     </div>
-    <div class="container">
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 rounded-circle m-1">EMR</a></span>
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-success p-4 rounded-circle m-1">PALS</a></span>
+    <div class="container mb-4">
+        <h2 class="text-center mb-4 text-secondary"><u>Testimonials</u> </h2>
+            <div class="row">
+                <div class="col-lg-3 col-sm-12 mb-2">
+                    <div class="card bg-primary text-white text-center p-3">
+                        <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                        <footer class="blockquote-footer text-white">
+                            <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-2">
+                    <div class="card bg-primary text-white text-center p-3">
+                        <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                        <footer class="blockquote-footer text-white">
+                            <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-2">
+                    <div class="card bg-primary text-white text-center p-3">
+                        <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                        <footer class="blockquote-footer text-white">
+                            <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>  
+                </div>
+                <div class="col-lg-3 col-sm-12 mb-2">
+                    <div class="card bg-primary text-white text-center p-3">
+                        <blockquote class="blockquote mb-0">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                        <footer class="blockquote-footer text-white">
+                            <small>
+                            Someone famous in <cite title="Source Title">Source Title</cite>
+                            </small>
+                        </footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>  
     </div>
-    <div class="container mb-2 mt-2">
-        <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 ">BLOOD & AIR BORNE PATHOGENS</a></span>
-    </div>
-
-</div>
-<div class="container mb-4">
-    <h2 class="text-center mb-4 text-secondary"><u>Testimonials</u> </h2>
+    <div class="container mb-4">
+        <h2 class="text-center mb-4 text-secondary"><u>Contact</u> </h2>
         <div class="row">
-            <div class="col-lg-3 col-sm-12 mb-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                    <footer class="blockquote-footer text-white">
-                        <small>
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                    </blockquote>
-                </div>
+            <div class="col-sm-12 col-lg-4">
+    
             </div>
-            <div class="col-lg-3 col-sm-12 mb-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                    <footer class="blockquote-footer text-white">
-                        <small>
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                    </blockquote>
-                </div>
+            <div class="col-sm-12 col-lg-4">
+                <form (ngSubmit)="sendContactInfo()">
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="First name">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Last name">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Email">
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control" placeholder="Phone">
+                    </div>
+                    <div class="mb-2">
+                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                    </div>
+    
+                    <button type="submit" class="btn btn-primary float-right mt-2">Send</button>
+                </form>
             </div>
-            <div class="col-lg-3 col-sm-12 mb-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                    <footer class="blockquote-footer text-white">
-                        <small>
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                    </blockquote>
-                </div>  
+            <div class="col-sm-12 col-lg-4">
+    
             </div>
-            <div class="col-lg-3 col-sm-12 mb-2">
-                <div class="card bg-primary text-white text-center p-3">
-                    <blockquote class="blockquote mb-0">
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
-                    <footer class="blockquote-footer text-white">
-                        <small>
-                        Someone famous in <cite title="Source Title">Source Title</cite>
-                        </small>
-                    </footer>
-                    </blockquote>
-                </div>
-            </div>
-        </div>  
+        </div>
+    </div>
+
 </div>
-<div class="container mb-4">
-    <h2 class="text-center mb-4 text-secondary"><u>Contact</u> </h2>
+
+
+<div class="container mb-3" *ngIf="showConfirmation()">
     <div class="row">
-        <div class="col-sm-12 col-lg-4">
-
-        </div>
-        <div class="col-sm-12 col-lg-4">
-            <form>
-                <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="First name">
-                </div>
-                <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Last name">
-                </div>
-                <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Email">
-                </div>
-                <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Phone">
-                </div>
-                <div class="mb-2">
-                    <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn-primary float-right mt-2">Send</button>
-            </form>
-        </div>
-        <div class="col-sm-12 col-lg-4">
-
-        </div>
+        <div class="col-lg-4 col-sm-12 mb-2"></div>
+        <div class="col-lg-4 col-sm-12 mb-2">
+            <h3 class="text-center text-secondary mb-5">Message Sent</h3>
+            <p class="text-center">Message received! The instructor will follow up as soon as possible</p>
+            <div class="text-center">
+                <form (ngSubmit)="returnHome()">
+                    <button class="course btn btn-primary btn-sm m-2" type="submit">Return</button>
+                </form>
+            </div>
+            
+        <div class="col-lg-4 col-sm-12 mb-2"></div>
     </div>
 </div>
