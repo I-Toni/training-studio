@@ -5,8 +5,6 @@ export class Course {
     
     constructor(public name: string,
                 public price: number){
-                    this.courseName = name;
-                    this.coursePrice = price;
                 }
     
     getName() {

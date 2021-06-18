@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../data.service';
 
 @Component({
   selector: 'app-registration',
@@ -6,8 +7,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  public courseSelected: string = "empty";
 
-  constructor() { }
+  constructor(private dataService: DataService) {
+    this.courseSelected = dataService.getSelectedCourse();
+   }
 
   ngOnInit(): void {
   }

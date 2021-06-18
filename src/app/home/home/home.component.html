@@ -1,13 +1,8 @@
 <div *ngIf="hideConfirmation()">
     <div class="text-center mb-4">
-        <div class="container">
-            <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">CPR</a></span>
-            <span class=""><a routerLink="/registration" class="course btn btn-outline-secondary p-4 rounded-circle m-1">AED</a></span>
-            <span class=""><a routerLink="/registration" class="course btn btn-outline-info p-4 rounded-circle m-1">ACLS</a></span>
-        </div>
-        <div class="container">
-            <span class=""><a routerLink="/registration" class="course btn btn-outline-danger p-4 rounded-circle m-1">EMR</a></span>
-            <span class=""><a routerLink="/registration" class="course btn btn-outline-success p-4 rounded-circle m-1">PALS</a></span>
+
+        <div class="container" >
+            <span  class="" *ngFor="let course of courses; index as i;"><a routerLink="/registration" (click)="saveName(course.name)" class="course btn btn-outline-info p-4 rounded-circle m-1">{{ course.name }} </a></span>
         </div>
     
     </div>
