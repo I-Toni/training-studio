@@ -1,6 +1,6 @@
 # A Foundation Web Application
 
-This web app will be the foundation/base for future web applications. Please checkout the wiki page for the project overview and iterations.
+This web app will be the foundation/base for future web applications. Please checkout the wiki page (https://github.com/I-Toni/joshwant_training/wiki) for the project overview and iterations.
 
 ## Master Branch Production link
 
