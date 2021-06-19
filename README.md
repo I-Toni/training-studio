@@ -1,4 +1,10 @@
-# TheGenericApp
+# A Foundation Web Application
+
+This web app will be the foundation/base for future web applications.
+
+## Master Branch Production link
+
+https://joshwanttraining.web.app/home
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.2.0.
 
