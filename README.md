@@ -1,6 +1,6 @@
 # A Foundation Web Application
 
-This web app will be the foundation/base for future web applications.
+This web app will be the foundation/base for future web applications. Please checkout the wiki page for the project overview and iterations.
 
 ## Master Branch Production link
 
