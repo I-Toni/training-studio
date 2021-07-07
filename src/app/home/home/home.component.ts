@@ -16,6 +16,7 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.courses = this.dataService.getCourses();
+    
   }
 
   
