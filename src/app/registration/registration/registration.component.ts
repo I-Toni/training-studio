@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
+import { Student } from '../../model/student';
 
 @Component({
   selector: 'app-registration',
@@ -12,12 +13,24 @@ export class RegistrationComponent implements OnInit {
   public showSummary: boolean = false;
   public showConfirmation: boolean = false;
   courseSelected: string = "";
+  date: string = "empty";
+  listOfDates: string[] = ['7/16/2021','7/18/2021','7/19/2021','7/20/2021'];
+  student: Student = new Student();
+  firstName: string = "";
+  lastName: string = "";
+  email: string = "";
+  phone: string = "";
+  
 
   constructor(private dataService: DataService) {
     this.courseSelected = dataService.getSelectedCourse();
    }
 
   ngOnInit(): void {
+  }
+
+  trackByFn(index: any, item: any) {
+    return index;
   }
 
   displayPickADateUI(): boolean {
@@ -60,6 +73,8 @@ export class RegistrationComponent implements OnInit {
   setShowStudentInfoToFalse() {
     this.showStudentInfo = false;
     this.showSummary = true;
+    this.student.setFirstName(this.firstName);
+    this.student.setLastName(this.lastName);
   }
 
   setShowSummaryToFalse() {
@@ -71,5 +86,7 @@ export class RegistrationComponent implements OnInit {
     this.showConfirmation = false;
     this.showPickADate = true;
   }
+
+  
 
 }

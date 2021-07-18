@@ -7,12 +7,7 @@ export class Student {
     course: string = "";
 
     
-    constructor(public fname: string,
-                public lname: number,
-                public Studentemail: string,
-                public number: string,
-                public courseDate: string,
-                public courseName: string){
+    constructor(){
                 }
     
     getFirstame() {

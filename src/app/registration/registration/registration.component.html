@@ -1,20 +1,17 @@
+
 <div *ngIf="displayPickADateUI()" class="container mb-3">
     <div class="row">
         <div class="col-lg-4 col-sm-12 mb-2"></div>
         <div class="col-lg-4 col-sm-12 mb-2">
             <h3 class="text-center text-secondary mb-5"><u>{{courseSelected}} CLASS DATES</u></h3>
             
-            <form class="form-inline">
-                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Pick A Date</label>
-                <select class="custom-select p-2my-1 mr-sm-2" id="inlineFormCustomSelectPref">
-                  <option selected>Choose...</option>
-                  <option value="1">5/5/2021</option>
-                  <option value="2">5/6/2021</option>
-                  <option value="3">5/7/2021</option>
-                  <option value="3">5/9/2021</option>
+            <form class="form-inline pl-3 pr-3" (ngSubmit)="setShowPickADateToFalse()" >
+                <label class="my-1 mr-2" for="inlineFormCustomSelectPref">Select: </label>
+                <select class="custom-select p-2my-1 mr-sm-2"  id="inlineFormCustomSelectPref" name="courseDate" [(ngModel)]="date">
+                    <option *ngFor="let aDate of listOfDates; index as i; trackBy:trackByFn">{{ aDate}}</option>
                 </select>
               
-                <button type="submit" (click)="setShowPickADateToFalse()" class="btn btn-primary my-1">Next</button>
+                <button type="submit" class="btn btn-primary my-1">Next</button>
             </form>
         </div>
         <div class="col-lg-4 col-sm-12 mb-2"></div>
@@ -26,21 +23,21 @@
         <div class="col-lg-4 col-sm-12 mb-2"></div>
         <div class="col-lg-4 col-sm-12 mb-2">
             <h3 class="text-center text-secondary mb-5"><u>Info</u></h3>
-            <form>
+            <form (ngSubmit)="setShowStudentInfoToFalse()">
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="First name">
+                    <input type="text" name="firstName" [(ngModel)]="firstName" class="form-control" placeholder="First name">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Last name">
+                    <input type="text"  name="lastName" [(ngModel)]="lastName" class="form-control" placeholder="Last name">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Email">
+                    <input type="text"  name="email" [(ngModel)]="email" class="form-control" placeholder="Email">
                 </div>
                 <div class="mb-2">
-                    <input type="text" class="form-control" placeholder="Phone">
+                    <input type="text"  name="phone" [(ngModel)]="phone" class="form-control" placeholder="Phone">
                 </div>
 
-                <button type="submit" (click)="setShowStudentInfoToFalse()" class="btn btn-primary float-right mt-2">Next</button>
+                <button type="submit"  class="btn btn-primary float-right mt-2">Next</button>
             </form>
         </div>
         <div class="col-lg-4 col-sm-12 mb-2"></div>
@@ -55,11 +52,11 @@
             <ul class="list-group">
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span class="badge badge-primary badge-pill">First Name:</span>
-                    Cras justo odio
+                    {{firstName}}
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span class="badge badge-primary badge-pill">Last Name:</span>
-                    Dapibus ac facilisis in
+                    {{lastName}}
                 </li>
                 <li class="list-group-item d-flex justify-content-between align-items-center">
                     <span class="badge badge-primary badge-pill">Email:</span>
