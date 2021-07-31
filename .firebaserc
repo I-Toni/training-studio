@@ -1,5 +1,14 @@
 {
   "projects": {
     "default": "training-studio"
+  },
+  "targets": {
+    "training-studio": {
+      "hosting": {
+        "the-generic-app": [
+          "training-studio"
+        ]
+      }
+    }
   }
 }
