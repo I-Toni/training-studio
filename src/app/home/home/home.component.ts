@@ -16,9 +16,14 @@ export class HomeComponent implements OnInit {
 
   ngOnInit(): void {
     this.courses = this.dataService.getCourses();
-    
+    this.dataService.getMessages().subscribe(messages => {
+      console.log(messages);
+    })
   }
 
+  getMessages(){
+    return this.dataService.getMessages();
+  }
   
   saveName(name: string) {
     this.dataService.setSelectedCourse(name);
