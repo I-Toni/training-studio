@@ -10,12 +10,18 @@ import { Message } from './model/message';
 export class DataService {
   public courses: Array<Course> = [];
   public selectedCourse : string = "";
-  messages: Observable<any[]>;
+  firestoreMessages: Observable<any[]>;
+  messages!: Message[];
+  testMessage!: string[];
 
   constructor(firestore: AngularFirestore) { 
     // the instantiation was set up here because the ngOnInit is not run when define this service in the home component
     this.courses = [new Course("CPR", 80), new Course("AED", 90), new Course("ACLS", 100), new Course("EMR", 60), new Course("PALS", 70)];
-    this.messages = firestore.collection('messages').valueChanges();
+    this.firestoreMessages = firestore.collection('messages').valueChanges();
+    this.firestoreMessages.subscribe(messages => {
+      this.messages = messages;
+    });
+    this.testMessage = ["John", "Marcy", "Lebowski"];
   }
 
   ngOnInit() {
@@ -23,7 +29,7 @@ export class DataService {
   }
 
   getMessages(){
-    return this.messages;
+    return this.firestoreMessages;
   }
 
   setSelectedCourse(course: string) {

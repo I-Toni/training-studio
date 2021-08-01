@@ -95,6 +95,26 @@
 </div>
 
 
+
+<div class="container mb-3">
+    <div class="row">
+        <div class="col-lg-4 col-sm-12 mb-2"></div>
+        <div class="col-lg-4 col-sm-12 mb-2">
+            <div *ngIf="homeMessages.length > 0; else noMessages">
+                <ul *ngFor="let message of homeMessages; index as i;">
+                    <li>{{ message.fname}}, {{message.lname}}, {{message.email}}, {{message.phone}}</li>
+                </ul>
+            </div> 
+            <ng-template #noMessages>
+                <hr>
+                <p class="text-center">There are no messages available</p>
+            </ng-template>
+        </div>        
+        <div class="col-lg-4 col-sm-12 mb-2"></div>
+    </div>
+</div>
+
+
 <div class="container mb-3" *ngIf="showConfirmation()">
     <div class="row">
         <div class="col-lg-4 col-sm-12 mb-2"></div>
@@ -111,13 +131,3 @@
     </div>
 </div>
 
-<div class="container mb-3" *ngIf="showConfirmation()">
-    <div class="row">
-        <div class="col-lg-4 col-sm-12 mb-2"></div>
-        <div class="col-lg-4 col-sm-12 mb-2">
-            <div>
-                
-            </div>            
-        <div class="col-lg-4 col-sm-12 mb-2"></div>
-    </div>
-</div>

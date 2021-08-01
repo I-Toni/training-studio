@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { DataService } from '../../data.service';
 import { Course } from '../../model/course';
+import { Message } from '../../model/message';
 
 @Component({
   selector: 'app-home',
@@ -11,18 +12,19 @@ export class HomeComponent implements OnInit {
   public displayMessage: boolean = false;
   public courses: Array<Course> = [];
   public courseSelected: string = "empty";
+  public homeMessages: Message[] = [];
+  public fname?: string;
 
-  constructor(private dataService: DataService) { }
+  constructor(private dataService: DataService) { 
+  }
 
   ngOnInit(): void {
     this.courses = this.dataService.getCourses();
+    //this.homeMessages = this.dataService.getMessages();
     this.dataService.getMessages().subscribe(messages => {
-      console.log(messages);
-    })
-  }
-
-  getMessages(){
-    return this.dataService.getMessages();
+      this.homeMessages = messages;
+      console.log(this.homeMessages);
+    });
   }
   
   saveName(name: string) {

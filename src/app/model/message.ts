@@ -1,11 +1,9 @@
-export class Message {
-    
-    
-    constructor(public fname: string,
-                public lname: string,
-                public email: string,
-                public phone: string,
-                public message: string){}
-    
+export interface Message {
+    // you can use an interface or a class here. if you use a class follow: email?: string; example.
+    email: string;
+    fname: string;
+    lname: string;
+    message: string;
+    phone: string;
 
   }
