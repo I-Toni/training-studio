@@ -68,23 +68,26 @@
             <div class="col-sm-12 col-lg-4">
                 <form (ngSubmit)="sendContactInfo()">
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="First name">
+                        <input type="text" class="form-control" name="firstName" [(ngModel)]="message.fname" placeholder="First name">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Last name">
+                        <input type="text" class="form-control"  name="lastName" [(ngModel)]="message.lname" placeholder="Last name">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Email">
+                        <input type="text" class="form-control" name="email" [(ngModel)]="message.email" placeholder="Email">
                     </div>
                     <div class="mb-2">
-                        <input type="text" class="form-control" placeholder="Phone">
+                        <input type="text" class="form-control" name="phone" [(ngModel)]="message.phone" placeholder="Phone">
                     </div>
                     <div class="mb-2">
-                        <textarea class="form-control" id="exampleFormControlTextarea1" placeholder="Message" rows="3"></textarea>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" name="message" [(ngModel)]="message.message" placeholder="Message" rows="3"></textarea>
                     </div>
     
-                    <button type="submit" class="btn btn-primary float-right mt-2">Send</button>
+                    <button type="submit" [disabled]="!message.fname || !message.lname || !message.email || !message.phone || !message.message" class="btn btn-primary float-right mt-2">Send</button>
                 </form>
+                <div *ngIf="errorMessage">
+                    <p class="text-warning">Error! Message not submitted.</p>
+                </div>
             </div>
             <div class="col-sm-12 col-lg-4">
     
@@ -102,7 +105,7 @@
         <div class="col-lg-4 col-sm-12 mb-2">
             <div *ngIf="homeMessages.length > 0; else noMessages">
                 <ul *ngFor="let message of homeMessages; index as i;">
-                    <li>{{ message.fname}}, {{message.lname}}, {{message.email}}, {{message.phone}}</li>
+                    <li>{{ message.id }}, {{ message.fname}}, {{message.lname}}, {{message.email}}, {{message.phone}}</li>
                 </ul>
             </div> 
             <ng-template #noMessages>
