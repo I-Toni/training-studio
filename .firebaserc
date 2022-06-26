@@ -1,7 +1,6 @@
 {
   "projects": {
-    "default": "training-studio",
-    "training-studio": "training-studio"
+    "default": "training-studio"
   },
   "targets": {
     "training-studio": {
