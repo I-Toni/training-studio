@@ -15,7 +15,7 @@
       ]
     },
     {
-      "target": "the-generic-app",
+      "target": "training-studio",
       "public": "public",
       "ignore": [
         "firebase.json",
