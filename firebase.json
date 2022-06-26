@@ -1,6 +1,9 @@
 {
   "hosting": [
     {
+      "target": "training-studio"
+    },
+    {
       "public": "public",
       "ignore": [
         "firebase.json",
@@ -15,7 +18,6 @@
       ]
     },
     {
-      "target": "training-studio",
       "public": "public",
       "ignore": [
         "firebase.json",

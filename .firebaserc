@@ -5,7 +5,6 @@
   "targets": {
     "training-studio": {
       "hosting": {
-        "target": "training-studio",
         "the-generic-app": [
           "training-studio"
         ]
